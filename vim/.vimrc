@@ -40,13 +40,8 @@ colo minimalist
 set guifont=Fira\ Code\ Regular\ 13
 set guioptions-=T
 
-" tree view file explorer settings
+" nerdtree settings
 map <C-n> :NERDTreeToggle<CR>
-"let g:netrw_banner = 0
-"let g:netrw_browse_split = 3
-"let g:netrw_liststyle = 3
-"let g:netrw_winsize = 25
-"map <C-n> :Lexplore<CR>
 
 " ctrlp settings
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
