@@ -31,14 +31,29 @@ call plug#begin('~/.vim/plugged')
     Plug 'scrooloose/nerdtree'
     Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
     Plug 'gcmt/taboo.vim'
+    Plug 'hdima/python-syntax'
+    Plug 'jelera/vim-javascript-syntax'
+    Plug 'joshdick/onedark.vim'
+    Plug 'w0rp/ale'
 call plug#end()
+
+" Ale linter settings
+let g:ale_linters = {
+\   'javascript': ['standard'],
+\   'python': ['pycodestyle'],
+\}
 
 " Taboo settings
 let g:taboo_tab_format = "%N - %f%m "
 
-colo minimalist
-set guifont=Fira\ Code\ Regular\ 13
+set background=dark
+colo onedark
+set guifont=Fira\ Code\ Regular\ 10
 set guioptions-=T
+set guioptions-=m
+set guioptions-=r
+set guioptions-=L
+
 
 " nerdtree settings
 map <C-n> :NERDTreeToggle<CR>
