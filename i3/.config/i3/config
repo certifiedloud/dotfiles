@@ -10,6 +10,12 @@ exec telegram
 assign [class="Google-chrome"] 3
 assign [class="Telegram"] 1
 
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
