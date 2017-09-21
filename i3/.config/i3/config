@@ -23,6 +23,11 @@ bindsym $mod+l focus right
 # Start NetworkManager Applet
 exec_always --no-startup-id nm-applet
 
+# move focused workspace to monitor
+bindsym $mod+Shift+greater move workspace to output right
+bindsym $mod+Shift+less move workspace to output left
+
+
 set $mod Mod4
 
 # lock screen
