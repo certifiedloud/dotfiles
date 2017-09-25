@@ -35,6 +35,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'jelera/vim-javascript-syntax'
     Plug 'joshdick/onedark.vim'
     Plug 'w0rp/ale'
+    Plug 'Valloric/MatchTagAlways'
 call plug#end()
 
 " Ale linter settings
@@ -61,6 +62,8 @@ map <C-n> :NERDTreeToggle<CR>
 " ctrlp settings
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_custom_ignore = '/node_modules'
+let g:ctrlp_custom_ignore = '/deps'
+let g:ctrlp_custom_ignore = '/_build'
 
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
