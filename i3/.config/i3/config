@@ -5,6 +5,8 @@
 # this file and re-run i3-config-wizard(1).
 #
 
+new_window pixel 1
+
 exec google-chrome-stable
 exec telegram
 assign [class="Google-chrome"] 3

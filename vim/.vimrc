@@ -2,9 +2,16 @@ set tabstop=2 softtabstop=2 shiftwidth=2 textwidth=79 smarttab expandtab
 " Filetype specific indentation
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
 
+" ignore case in searches
+set ic
+
+" Display line numbers
 set number
 
 set encoding=utf8
+
+" Highlight first search result
+set incsearch
 
 "Enable tag matching
 runtime macros/matchit.vim
@@ -24,7 +31,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'posva/vim-vue'
     Plug 'mileszs/ack.vim'
     Plug 'elixir-lang/vim-elixir'
-    Plug 'Raimondi/delimitMate'
     Plug 'tpope/vim-surround'
     Plug 'mattn/emmet-vim'
     Plug 'scrooloose/nerdcommenter'
@@ -36,7 +42,11 @@ call plug#begin('~/.vim/plugged')
     Plug 'joshdick/onedark.vim'
     Plug 'w0rp/ale'
     Plug 'Valloric/MatchTagAlways'
+    Plug 'jiangmiao/auto-pairs'
+    Plug 'garbas/vim-snipmate'
 call plug#end()
+
+"let NERDSpaceDelims=1
 
 " Ale linter settings
 let g:ale_linters = {
