@@ -18,7 +18,6 @@ set incsearch
 
 "Enable tag matching
 runtime macros/matchit.vim
-
 set updatetime=250
 
 " remap leader
@@ -50,10 +49,13 @@ call plug#begin('~/.vim/plugged')
     Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 call plug#end()
 
+autocmd FileType python UltiSnipsAddFiletypes django
+let g:UltiSnipsEditSplit='vertical'
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
-autocmd FileType python UltiSnipsAddFiletypes django
+let g:UltiSnipsSnippetDirectories=['UltiSnips', 'MySnips']
+let g:UltiSnipsSnippetsDir='~/.vim/MySnips'
 
 
 " Ale linter settings
