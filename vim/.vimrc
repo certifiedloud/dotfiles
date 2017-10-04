@@ -2,6 +2,9 @@ set tabstop=2 softtabstop=2 shiftwidth=2 textwidth=79 smarttab expandtab
 " Filetype specific indentation
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
 
+" Use system clipboard as main register
+set clipboard=unnamedplus
+
 " ignore case in searches
 set ic
 
@@ -35,7 +38,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'mattn/emmet-vim'
     Plug 'scrooloose/nerdcommenter'
     Plug 'scrooloose/nerdtree'
-    Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
     Plug 'gcmt/taboo.vim'
     Plug 'hdima/python-syntax'
     Plug 'jelera/vim-javascript-syntax'
@@ -43,10 +45,16 @@ call plug#begin('~/.vim/plugged')
     Plug 'w0rp/ale'
     Plug 'Valloric/MatchTagAlways'
     Plug 'jiangmiao/auto-pairs'
-    Plug 'garbas/vim-snipmate'
+    Plug 'SirVer/ultisnips'
+    Plug 'honza/vim-snippets'
+    Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 call plug#end()
 
-"let NERDSpaceDelims=1
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+autocmd FileType python UltiSnipsAddFiletypes django
+
 
 " Ale linter settings
 let g:ale_linters = {
