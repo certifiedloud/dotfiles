@@ -2,9 +2,18 @@ set tabstop=2 softtabstop=2 shiftwidth=2 textwidth=79 smarttab expandtab
 " Filetype specific indentation
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
 
-" Allow leaving insert mode with jk/kj
-inoremap jk <esc>
-inoremap kj <esc>
+" Make vims shell interactive
+set shellcmdflag=-ic
+
+" turn on relative line numbers
+set relativenumber
+
+" automatically read new file changes
+set autoread
+
+" Turn on auto complete for vim commands
+set wildmenu
+set wildmode=full
 
 " Lower the insert timeout to feel better with the above bindings
 autocmd InsertEnter * set timeoutlen=100
@@ -88,6 +97,7 @@ set guioptions-=L
 
 " nerdtree settings
 map <C-n> :NERDTreeToggle<CR>
+let NERDTreeIgnore = ['\.pyc$']
 
 " ctrlp settings
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
