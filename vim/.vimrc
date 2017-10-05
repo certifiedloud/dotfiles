@@ -2,6 +2,14 @@ set tabstop=2 softtabstop=2 shiftwidth=2 textwidth=79 smarttab expandtab
 " Filetype specific indentation
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
 
+" Allow leaving insert mode with jk/kj
+inoremap jk <esc>
+inoremap kj <esc>
+
+" Lower the insert timeout to feel better with the above bindings
+autocmd InsertEnter * set timeoutlen=100
+autocmd InsertLeave * set timeoutlen=100
+
 " Use system clipboard as main register
 set clipboard=unnamedplus
 
@@ -49,6 +57,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 call plug#end()
 
+" UltiSnips settings
 autocmd FileType python UltiSnipsAddFiletypes django
 let g:UltiSnipsEditSplit='vertical'
 let g:UltiSnipsExpandTrigger="<c-j>"
@@ -67,6 +76,7 @@ let g:ale_linters = {
 " Taboo settings
 let g:taboo_tab_format = "%N - %f%m "
 
+" Visual settings
 set background=dark
 colo onedark
 set guifont=Fira\ Code\ Regular\ 10
