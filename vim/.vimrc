@@ -28,8 +28,6 @@ set ic
 " Display line numbers
 set number
 
-set encoding=utf8
-
 " Highlight first search result
 set incsearch
 
