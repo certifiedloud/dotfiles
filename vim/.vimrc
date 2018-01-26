@@ -36,7 +36,7 @@ runtime macros/matchit.vim
 set updatetime=250
 
 " remap leader
-let mapleader=" "
+let mapleader=","
 
 call plug#begin('~/.vim/plugged')
     Plug 'dikiaap/minimalist'
@@ -62,6 +62,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
     Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+    Plug 'vimwiki/vimwiki'
 call plug#end()
 
 " UltiSnips settings

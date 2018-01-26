@@ -24,3 +24,12 @@ alias comecomecome='git pull'
 export EDITOR=vim
 
 export PATH=~/.npm-global/bin:$PATH
+export TERM=xterm-256color
+
+# add gems
+export PATH=/home/cody/.gem/ruby/2.4.0/bin:$PATH
+
+# virtualenv wrapper
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/code
+source /usr/bin/virtualenvwrapper.sh
