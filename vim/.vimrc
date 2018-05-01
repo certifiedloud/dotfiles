@@ -2,9 +2,6 @@ set tabstop=2 softtabstop=2 shiftwidth=2 textwidth=79 smarttab expandtab
 " Filetype specific indentation
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
 
-" Make vims shell interactive
-set shellcmdflag=-ic
-
 " turn on relative line numbers
 set relativenumber
 
