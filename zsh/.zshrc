@@ -16,7 +16,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 # Setup screens
-source ~/.screenlayout/work.sh
+source ~/.screenlayout/displaylink.sh
 
 alias g='gvim --remote-silent'
 alias comecomecome='git pull'
@@ -26,6 +26,9 @@ export EDITOR=vim
 export PATH=~/.npm-global/bin:$PATH
 export TERM=xterm-256color
 
+#shortcuts
+alias av='ansible-vault'
+
 # add gems
 export PATH=/home/cody/.gem/ruby/2.4.0/bin:$PATH
 
@@ -34,3 +37,10 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/code
 source /usr/bin/virtualenvwrapper.sh
 
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /home/cody/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/cody/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /home/cody/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/cody/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh

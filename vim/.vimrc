@@ -60,6 +60,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'honza/vim-snippets'
     Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
     Plug 'vimwiki/vimwiki'
+    Plug 'git-time-metric/gtm-vim-plugin'
 call plug#end()
 
 " UltiSnips settings
