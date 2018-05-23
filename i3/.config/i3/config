@@ -61,7 +61,7 @@ bindsym $mod+Shift+less move workspace to output left
 set $mod Mod4
 
 # lock screen
-bindsym $mod+p exec i3lock
+bindsym $mod+p exec i3lock -c 000000 -f
 
 # screen brightness
 bindsym XF86MonBrightnessUp exec xbacklight +10
