@@ -10,14 +10,11 @@
 ZSH_THEME="af-magic"
 
 HYPHEN_INSENSITIVE="true"
-plugins=(git ssh-agent)
+plugins=(git ssh-agent taskwarrior)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-# Setup screens
-source ~/.screenlayout/displaylink.sh
-
 alias g='gvim --remote-silent'
 alias comecomecome='git pull'
 
@@ -44,3 +41,5 @@ source /usr/bin/virtualenvwrapper.sh
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /home/cody/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/cody/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+
+alias ap="awsprofiles"

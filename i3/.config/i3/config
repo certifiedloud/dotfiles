@@ -5,11 +5,39 @@
 # this file and re-run i3-config-wizard(1).
 #
 
+
+set $monitorLaptop "eDP1"
+set $monitorLeft "DVI-I-2-2"
+set $monitorMiddle "HDMI1"
+set $monitorRight "HDMI2"
+set $monitorTop "DVI-I-1-1"
+
+# workspace variables
+set $workspace1 "1"
+set $workspace2 "2"
+set $workspace3 "3"
+set $workspace4 "4 "
+set $workspace5 "5"
+set $workspace6 "6"
+set $workspace7 "7"
+set $workspace8 "8"
+set $workspace9 "9"
+set $workspace10 "10"
+
+workspace $workspace1 output $monitorLaptop
+workspace $workspace2 output $monitorLaptop
+workspace $workspace3 output $monitorRight
+workspace $workspace4 output $monitorRight
+workspace $workspace5 output $monitorMiddle
+workspace $workspace6 output $monitorMiddle
+workspace $workspace7 output $monitorLeft
+workspace $workspace8 output $monitorLeft
+workspace $workspace9 output $monitorTop
+workspace $workspace10 output $monitorTop
+
 new_window pixel 1
 
-exec google-chrome-stable
-exec telegram
-assign [class="Google-chrome"] 3
+assign [class="Google-chrome"] 5
 assign [class="Telegram"] 1
 
 # change focus
@@ -186,7 +214,9 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
+#exec --no-startup-id  polybar -c ~/.config/polybar/config -r laptop
 bar {
         status_command i3status
+        tray_output primary
 }
 bindsym --release button6 kill # exec --no-startup-id import /tmp/latest-screenshot.png
