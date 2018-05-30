@@ -81,6 +81,7 @@ let g:taboo_tab_format = "%N - %f%m "
 " Visual settings
 set background=dark
 colo minimalist
+hi TabLineFill ctermfg=DarkGrey
 set guifont=Fira\ Code\ Regular\ 11
 set guioptions-=T
 set guioptions-=m
