@@ -40,18 +40,13 @@ call plug#begin('~/.vim/plugged')
     Plug 'ctrlpvim/ctrlp.vim'
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
-    Plug 'vim-scripts/xptemplate'
     Plug 'severin-lemaignan/vim-minimap'
-    Plug 'posva/vim-vue'
     Plug 'mileszs/ack.vim'
-    Plug 'elixir-lang/vim-elixir'
     Plug 'tpope/vim-surround'
     Plug 'mattn/emmet-vim'
     Plug 'scrooloose/nerdcommenter'
     Plug 'scrooloose/nerdtree'
     Plug 'gcmt/taboo.vim'
-    Plug 'hdima/python-syntax'
-    Plug 'jelera/vim-javascript-syntax'
     Plug 'joshdick/onedark.vim'
     Plug 'w0rp/ale'
     Plug 'Valloric/MatchTagAlways'
@@ -61,6 +56,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
     Plug 'vimwiki/vimwiki'
     Plug 'git-time-metric/gtm-vim-plugin'
+    Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 " UltiSnips settings
@@ -84,8 +80,8 @@ let g:taboo_tab_format = "%N - %f%m "
 
 " Visual settings
 set background=dark
-colo onedark
-set guifont=Fira\ Code\ Regular\ 10
+colo minimalist
+set guifont=Fira\ Code\ Regular\ 11
 set guioptions-=T
 set guioptions-=m
 set guioptions-=r
