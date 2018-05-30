@@ -33,7 +33,7 @@ runtime macros/matchit.vim
 set updatetime=250
 
 " remap leader
-let mapleader=","
+let mapleader=" "
 
 call plug#begin('~/.vim/plugged')
     Plug 'dikiaap/minimalist'
@@ -51,23 +51,11 @@ call plug#begin('~/.vim/plugged')
     Plug 'w0rp/ale'
     Plug 'Valloric/MatchTagAlways'
     Plug 'jiangmiao/auto-pairs'
-    Plug 'SirVer/ultisnips'
-    Plug 'honza/vim-snippets'
     Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
     Plug 'vimwiki/vimwiki'
     Plug 'git-time-metric/gtm-vim-plugin'
     Plug 'sheerun/vim-polyglot'
 call plug#end()
-
-" UltiSnips settings
-autocmd FileType python UltiSnipsAddFiletypes django
-let g:UltiSnipsEditSplit='vertical'
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-b>"
-let g:UltiSnipsSnippetDirectories=['UltiSnips', 'MySnips']
-let g:UltiSnipsSnippetsDir='~/.vim/MySnips'
-
 
 " Ale linter settings
 let g:ale_linters = {
