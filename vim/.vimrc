@@ -33,6 +33,7 @@ runtime macros/matchit.vim
 set updatetime=250
 
 " remap leader
+nnoremap <SPACE> <Nop>
 let mapleader=" "
 
 call plug#begin('~/.vim/plugged')
