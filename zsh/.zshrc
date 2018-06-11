@@ -43,3 +43,6 @@ source /usr/bin/virtualenvwrapper.sh
 [[ -f /home/cody/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/cody/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
 
 alias ap="awsprofiles"
+
+export GOPATH=$HOME/go
+export PATH=$HOME/go/bin:$PATH
