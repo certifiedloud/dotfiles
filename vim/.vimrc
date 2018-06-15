@@ -53,9 +53,10 @@ call plug#begin('~/.vim/plugged')
     Plug 'Valloric/MatchTagAlways'
     Plug 'jiangmiao/auto-pairs'
     Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-    Plug 'vimwiki/vimwiki'
     Plug 'git-time-metric/gtm-vim-plugin'
     Plug 'sheerun/vim-polyglot'
+    Plug 'yuttie/comfortable-motion.vim'
+    Plug 'FredKSchott/CoVim'
 call plug#end()
 
 " Ale linter settings
