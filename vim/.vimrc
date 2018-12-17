@@ -12,9 +12,6 @@ set autoread
 set wildmenu
 set wildmode=full
 
-" Lower the insert timeout to feel better with the above bindings
-autocmd InsertEnter * set timeoutlen=100
-autocmd InsertLeave * set timeoutlen=100
 
 " Use system clipboard as main register
 set clipboard=unnamedplus
@@ -30,6 +27,7 @@ set incsearch
 
 "Enable tag matching
 runtime macros/matchit.vim
+
 set updatetime=250
 
 " remap leader
@@ -38,6 +36,7 @@ let mapleader=" "
 
 call plug#begin('~/.vim/plugged')
     Plug 'dikiaap/minimalist'
+    Plug 'altercation/vim-colors-solarized'
     Plug 'ctrlpvim/ctrlp.vim'
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
@@ -56,7 +55,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'git-time-metric/gtm-vim-plugin'
     Plug 'sheerun/vim-polyglot'
     Plug 'yuttie/comfortable-motion.vim'
-    Plug 'FredKSchott/CoVim'
 call plug#end()
 
 " Ale linter settings
@@ -70,7 +68,7 @@ let g:taboo_tab_format = "%N - %f%m "
 
 " Visual settings
 set background=dark
-colo minimalist
+colo solarized
 hi TabLineFill ctermfg=DarkGrey
 set guifont=Fira\ Code\ Regular\ 11
 set guioptions-=T

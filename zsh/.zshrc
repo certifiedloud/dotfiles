@@ -23,6 +23,8 @@ export EDITOR=vim
 export PATH=~/.npm-global/bin:$PATH
 export TERM=xterm-256color
 
+export PATH=~/bin:$PATH
+
 #shortcuts
 alias av='ansible-vault'
 
@@ -46,3 +48,11 @@ alias ap="awsprofiles"
 
 export GOPATH=$HOME/go
 export PATH=$HOME/go/bin:$PATH
+
+alias vim=nvim
+
+# Kops
+export KOPS_STATE_STORE=s3://clusters.dev.rchops.com
+
+# Wallpaper
+feh --bg-scale ~/Pictures/bg.jpg
