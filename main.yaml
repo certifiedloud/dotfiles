@@ -1,0 +1,5 @@
+- name: configure local computer
+  hosts: localhost
+  remote_user: cody
+  roles:
+    - linux

@@ -1,0 +1,10 @@
+---
+packages:
+  - gpaste
+  - neovim
+  - stow
+  - yay
+
+stow_packages:
+ - vim
+ - git
