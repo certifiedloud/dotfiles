@@ -59,7 +59,11 @@ call plug#begin('~/.vim/plugged')
     Plug 'sheerun/vim-polyglot'
     Plug 'yuttie/comfortable-motion.vim'
     Plug 'vimwiki/vimwiki'
+    Plug 'lambdalisue/suda.vim'
 call plug#end()
+
+" Forgot sudo? No problem.
+cmap w!! w suda://%
 
 " Ale linter settings
 let g:ale_linters = {
