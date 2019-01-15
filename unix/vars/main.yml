@@ -7,3 +7,4 @@ arch_packages:
 
 dotfiles:
   - {template: vimrc.j2, filename: init.vim, targetDir: ~/.config/neovim/}
+  - {template: i3conf.j2, filename: .i3confg, targetDir: ~/.config/fake/i3/}

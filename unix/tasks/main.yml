@@ -4,9 +4,13 @@
   become: yes
   become_method: sudo
   when: ansible_distribution == 'Archlinux'
+  tags:
+    - packages
 
 - name: Create directory for generated templates
   file: path={{ dotfiles_dir }} state=directory
+  tags:
+    - dotfiles
 
 - name: Process templates
   template:
@@ -14,11 +18,17 @@
     dest: "{{ dotfiles_dir }}/{{ item.filename }}"
   with_items:
     - "{{ dotfiles }}"
+  tags:
+    - dotfiles
+  notify:
+    - install vim plugins
 
 - name: Create dotfile directories
   file: path="{{ item.targetDir }}" state=directory
   with_items:
     - "{{ dotfiles }}"
+  tags:
+    - dotfiles
 
 
 - name: symlink dotfiles
@@ -28,4 +38,6 @@
     state: link
   with_items:
     - "{{ dotfiles }}"
+  tags:
+    - dotfiles
 
