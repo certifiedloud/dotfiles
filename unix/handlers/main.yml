@@ -1,2 +1,3 @@
 ---
-# handlers file for linux
+- name: install vim plugins
+  command: nvim +PlugClean +PlugInstall +qall

@@ -1,2 +1,9 @@
 ---
-# vars file for linux
+arch_packages:
+  - gpaste
+  - neovim
+  - yay
+  - stow
+
+dotfiles:
+  - {template: vimrc.j2, filename: init.vim, targetDir: ~/.config/neovim/}

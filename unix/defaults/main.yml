@@ -1,10 +1,2 @@
 ---
-packages:
-  - gpaste
-  - neovim
-  - stow
-  - yay
-
-stow_packages:
- - vim
- - git
+dotfiles_dir: ~/dfiles

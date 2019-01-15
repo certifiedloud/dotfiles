@@ -1,10 +1,31 @@
 ---
 - name: Install packages
-  pacman: name={{ packages }} state=present update_cache=yes
+  pacman: name={{ arch_packages }} state=latest update_cache=yes
   become: yes
   become_method: sudo
+  when: ansible_distribution == 'Archlinux'
 
-- name: Stow dotfiles
-  command: stow {{ item }}  
-  with_items: 
-    - "{{ stow_packages }}"
+- name: Create directory for generated templates
+  file: path={{ dotfiles_dir }} state=directory
+
+- name: Process templates
+  template:
+    src: "{{ item.template}}"
+    dest: "{{ dotfiles_dir }}/{{ item.filename }}"
+  with_items:
+    - "{{ dotfiles }}"
+
+- name: Create dotfile directories
+  file: path="{{ item.targetDir }}" state=directory
+  with_items:
+    - "{{ dotfiles }}"
+
+
+- name: symlink dotfiles
+  file:
+    src: "{{dotfiles_dir}}/{{ item.filename}}"
+    dest: "{{ item.targetDir }}/{{ item.filename }}"
+    state: link
+  with_items:
+    - "{{ dotfiles }}"
+
