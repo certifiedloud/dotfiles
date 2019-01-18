@@ -60,6 +60,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'yuttie/comfortable-motion.vim'
     Plug 'vimwiki/vimwiki'
     Plug 'lambdalisue/suda.vim'
+Plug 'w0ng/vim-hybrid'
 call plug#end()
 
 " Forgot sudo? No problem.
@@ -76,7 +77,7 @@ let g:taboo_tab_format = "%N - %f%m "
 
 " Visual settings
 set background=dark
-colo minimalist
+colo hybrid
 hi TabLineFill ctermfg=DarkGrey
 
 " nerdtree settings
