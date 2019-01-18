@@ -18,7 +18,7 @@ source $ZSH/oh-my-zsh.sh
 alias g='gvim --remote-silent'
 alias comecomecome='git pull'
 
-export EDITOR=vim
+export EDITOR=nvim
 
 export PATH=~/.npm-global/bin:$PATH
 export TERM=xterm-256color
