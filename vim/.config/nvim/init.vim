@@ -73,7 +73,7 @@ let g:ale_linters = {
 \}
 
 " Taboo settings
-let g:taboo_tab_format = "%N - %f%m "
+let g:taboo_tab_format = "%f%m (%N)"
 
 " Visual settings
 set background=dark
