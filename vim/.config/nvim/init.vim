@@ -60,7 +60,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'yuttie/comfortable-motion.vim'
     Plug 'vimwiki/vimwiki'
     Plug 'lambdalisue/suda.vim'
-Plug 'w0ng/vim-hybrid'
+    Plug 'w0ng/vim-hybrid'
+    Plug 'mhinz/vim-startify'
 call plug#end()
 
 " Forgot sudo? No problem.
