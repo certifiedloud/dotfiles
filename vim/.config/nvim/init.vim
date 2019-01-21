@@ -1,7 +1,7 @@
 set termguicolors
 
 " Startify options
-let g:startify_session_dir = ~/.config/nvim
+let g:startify_session_dir = '~/.config/nvim'
 
 let g:gitgutter_sign_added = '|'
 let g:gitgutter_sign_modified = '|'
