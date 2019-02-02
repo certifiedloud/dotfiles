@@ -48,7 +48,7 @@ let mapleader=","
 call plug#begin('~/.vim/plugged')
     Plug 'easymotion/vim-easymotion'
     Plug 'dikiaap/minimalist'
-    Plug 'ctrlpvim/ctrlp.vim'
+    Plug 'junegunn/fzf.vim'
     Plug 'airblade/vim-gitgutter'
     Plug 'mileszs/ack.vim'
     Plug 'tpope/vim-surround'
@@ -88,11 +88,8 @@ hi TabLineFill ctermfg=DarkGrey
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.pyc$']
 
-" ctrlp settings
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-let g:ctrlp_custom_ignore = '/node_modules'
-let g:ctrlp_custom_ignore = '/deps'
-let g:ctrlp_custom_ignore = '/_build'
+" fzf keybinding
+map <C-p> :FZF<CR>
 
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
