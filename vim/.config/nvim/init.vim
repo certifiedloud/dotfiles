@@ -16,6 +16,9 @@ autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
 " automatically read new file changes
 set autoread
 
+" allow me to switch away from unsaved buffers
+set hidden
+
 " Show whitespace after characters
 " set list
 
@@ -33,6 +36,16 @@ set ic
 
 " Display line numbers
 set number
+
+" Easier split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Better split open defaults
+set splitbelow
+set splitright
 
 " Highlight first search result
 set incsearch
@@ -65,6 +78,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'lambdalisue/suda.vim'
     Plug 'w0ng/vim-hybrid'
     Plug 'mhinz/vim-startify'
+    Plug 'tpope/vim-abolish'
 call plug#end()
 
 " Forgot sudo? No problem.
