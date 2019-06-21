@@ -12,6 +12,11 @@ let g:gitgutter_sign_modified_removed = '>'
 set tabstop=2 softtabstop=2 shiftwidth=2 textwidth=79 smarttab expandtab
 " Filetype specific indentation
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
+au FileType go set noexpandtab
+au FileType go set shiftwidth=4
+au FileType go set softtabstop=4
+au FileType go set tabstop=4
+
 
 " automatically read new file changes
 set autoread
@@ -79,7 +84,12 @@ call plug#begin('~/.vim/plugged')
     Plug 'w0ng/vim-hybrid'
     Plug 'mhinz/vim-startify'
     Plug 'tpope/vim-abolish'
+    Plug 'SirVer/ultisnips'
+    Plug 'fatih/vim-go'
+    " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 call plug#end()
+
+let g:deoplete#enable_at_startup = 1
 
 " Forgot sudo? No problem.
 cmap w!! w suda://%
@@ -92,6 +102,14 @@ let g:ale_linters = {
 
 " Taboo settings
 let g:taboo_tab_format = "%f%m (%N)"
+
+"Ultisnips settings
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetsDir='/home/cody/.config/nvim/mysnippets'
+let g:UltiSnipsSnippetDirectories=["mysnippets"]
 
 " Visual settings
 set background=dark

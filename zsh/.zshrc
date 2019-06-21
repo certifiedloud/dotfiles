@@ -32,9 +32,9 @@ alias av='ansible-vault'
 export PATH=/home/cody/.gem/ruby/2.4.0/bin:$PATH
 
 # virtualenv wrapper
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/code
-source /usr/bin/virtualenvwrapper.sh
+#export WORKON_HOME=$HOME/.virtualenvs
+#export PROJECT_HOME=$HOME/code
+#source /usr/bin/virtualenvwrapper.sh
 
 
 # tabtab source for serverless package
