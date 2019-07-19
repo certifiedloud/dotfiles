@@ -13,29 +13,14 @@ HYPHEN_INSENSITIVE="true"
 plugins=(git ssh-agent taskwarrior)
 
 source $ZSH/oh-my-zsh.sh
+export TERMINAL=kitty
 
-# User configuration
-alias g='gvim --remote-silent'
-alias comecomecome='git pull'
-
-export EDITOR=nvim
+export EDITOR=vim
 
 export PATH=~/.npm-global/bin:$PATH
 export TERM=xterm-256color
 
 export PATH=~/bin:$PATH
-
-#shortcuts
-alias av='ansible-vault'
-
-# add gems
-export PATH=/home/cody/.gem/ruby/2.4.0/bin:$PATH
-
-# virtualenv wrapper
-#export WORKON_HOME=$HOME/.virtualenvs
-#export PROJECT_HOME=$HOME/code
-#source /usr/bin/virtualenvwrapper.sh
-
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
@@ -48,11 +33,6 @@ alias ap="awsprofiles"
 
 export GOPATH=$HOME/go
 export PATH=$HOME/go/bin:$PATH
-
-alias vim=nvim
-
-# Kops
-export KOPS_STATE_STORE=s3://clusters.dev.rchops.com
 
 # Wallpaper
 feh --bg-scale ~/Pictures/bg.jpg
