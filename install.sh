@@ -1,7 +1,6 @@
 #!/bin/bash
 set -e
 
-
 # Ensure git is available
 command -v git >/dev/null 2>&1 || { echo >&2 "Please install git before continuing"; exit 1; }
 
