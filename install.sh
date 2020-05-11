@@ -13,8 +13,8 @@ function dotfiles {
 git clone --bare git@github.com:certifiedloud/dotfiles.git $HOME/.dotfiles
 
 # Checkout the content from the repo to $HOME
-dotfiles checkout || echo "Backup or remove existing files and try again" &&\
-  rm -rf $HOME/.dotfiles &&\
+dotfiles checkout || echo "Backup or remove existing files and try again"; \
+  rm -rf $HOME/.dotfiles; \
   exit 1
 
 # Hide untracked files in this local repo
