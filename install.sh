@@ -17,4 +17,4 @@ mkdir -p .config-backup && \
 dotfiles checkout
 
 # Hide untracked files in this local repo
-dotiles config --local status.showUntrackedFiles no
+dotfiles config --local status.showUntrackedFiles no
