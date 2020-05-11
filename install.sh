@@ -2,7 +2,7 @@
 
 
 # Ensure git is available
-command -v cowsay >/dev/null 2>&1 || { echo >&2 "Please install git before continuing"; exit 1; }
+command -v git >/dev/null 2>&1 || { echo >&2 "Please install git before continuing"; exit 1; }
 
 # Create the temp alias
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
