@@ -36,3 +36,6 @@ export PATH=$HOME/go/bin:$PATH
 
 # Wallpaper
 feh --bg-scale ~/Pictures/bg.jpg
+
+# Dotfiles management
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
