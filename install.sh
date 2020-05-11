@@ -11,9 +11,15 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 git clone --bare git@github.com:certifiedloud/dotfiles.git $HOME/.dotfiles
 
 # Checkout the content from the repo to $HOME
-mkdir -p .config-backup && \
-  dotfiles checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
-  xargs -I{} mv {} .config-backup/{} && echo "Backed up conflicting files to .config-backup"
+mkdir -p .config-backup
+dotfiles checkout
+if [ $? = 0  ]; then
+  echo "Checked out config.";
+else
+  echo "Backing up pre-existing dot files.";
+  config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs
+  -I{} mv {} .config-backup/{}
+fi;
 dotfiles checkout
 
 # Hide untracked files in this local repo
