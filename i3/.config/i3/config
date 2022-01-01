@@ -64,8 +64,10 @@ set $mod Mod4
 bindsym $mod+p exec i3lock -c 000000 -f
 
 # screen brightness
-bindsym XF86MonBrightnessUp exec xbacklight +10
-bindsym XF86MonBrightnessDown exec xbacklight -10
+#bindsym XF86MonBrightnessUp exec xbacklight +10
+#bindsym XF86MonBrightnessDown exec xbacklight -10
+bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
+bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # audio keys
 bindsym XF86AudioRaiseVolume exec amixer set Master 10%+ unmute
