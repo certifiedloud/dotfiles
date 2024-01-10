@@ -27,6 +27,10 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
   -- NOTE: First, some plugins that don't require any configuration
 
+  'kylechui/nvim-surround',
+  version = "*", -- Use for stability; omit to use `main` branch for the latest features
+  event = "VeryLazy",
+
   -- Git related plugins
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
@@ -310,6 +314,9 @@ require('telescope').setup {
   },
 }
 
+require("nvim-surround").setup{
+    -- Configuration here, or leave empty to use defaults
+}
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
 
