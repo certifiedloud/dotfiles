@@ -58,6 +58,13 @@ require('lazy').setup({
   },
 
   {
+    'windwp/nvim-autopairs',
+    opts = {
+      event = "InsertEnter",
+    },
+  },
+
+  {
     -- Autocompletion
     'hrsh7th/nvim-cmp',
     dependencies = {
